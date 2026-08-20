@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0d" />
+    <title>Fabilous Lashidi — Software Developer</title>
+    <meta
+      name="description"
+      content="Fabilous Lashidi — software developer in Zimbabwe. Websites, web apps, and CT Flex, recognized at AIE 2026."
+    />
+    <meta property="og:title" content="Fabilous Lashidi — Software Developer" />
+    <meta property="og:description" content="Websites and products that have to work in the real world. Cofounder of CT Flex." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabber04.github.io/portfolio/" />
+    <meta property="og:image" content="https://fabber04.github.io/portfolio/assets/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://fabber04.github.io/portfolio/assets/og.jpg" />
+    <link rel="canonical" href="https://fabber04.github.io/portfolio/" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="home">
+    <div class="orb orb-lime" aria-hidden="true"></div>
+    <div class="orb orb-purple" aria-hidden="true"></div>
+
+    <div class="site-top">
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text" data-logo>lashidi</span>
+      </a>
+
+      <nav class="nav-pills" aria-label="Primary">
+        <a class="pill is-active" href="index.html">Home</a>
+        <a class="pill" href="index.html#work">Work</a>
+        <a class="pill" href="about.html">About</a>
+        <a class="pill" href="index.html#rates">Rates</a>
+        <a class="pill" href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M6.3 17.7l1.4-1.4M16.3 7.7l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5z" />
+          </svg>
+        </button>
+        <button class="menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+        <a class="btn btn-purple js-hire" id="hire-link" href="#contact">Hire me</a>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" hidden>
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#rates">Rates</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="mobile-hire js-hire" href="#contact">WhatsApp me</a>
+    </nav>
+    </div>
+
+    <main id="top">
+      <section class="hero">
+        <aside class="hero-side">
+          <p class="status">
+            <span class="status-dot"></span>
+            <span data-availability>Open for freelance</span>
+          </p>
+          <ul class="skill-list" id="skill-list"></ul>
+          <div class="social-row js-socials" id="social-row"></div>
+        </aside>
+
+        <div class="hero-main">
+          <p class="eyebrow" data-role>Software Developer</p>
+          <h1 class="display-name">
+            <span data-first>Fabilous</span>
+            <span data-last>Lashidi</span>
+          </h1>
+          <p class="hero-copy" data-tagline>
+            I build websites and products that have to work in the real world — from Zimbabwe.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#rates">View rates</a>
+            <a class="btn btn-ghost" href="#work">See work</a>
+          </div>
+        </div>
+
+        <div class="hero-portrait">
+          <div class="portrait-frame">
+            <img
+              class="portrait-photo"
+              src="assets/portrait.jpg"
+              alt="Portrait of Fabilous Lashidi"
+              width="800"
+              height="1000"
+            />
+            <div class="portrait-chip">
+              <span data-location>Available worldwide</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="intro">
+        <div class="band-copy">
+          <p class="eyebrow">Welcome</p>
+          <h2>Work you can hire, and a person you can trust.</h2>
+          <p class="lede" data-bio></p>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="about.html">About me</a>
+            <a class="btn btn-ghost" href="#work">See work</a>
+          </div>
+        </div>
+        <div class="band-card">
+          <p class="band-kicker">What I build</p>
+          <ul class="stack-list" id="stack-list"></ul>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2>Problem, build, result.</h2>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head">
+          <p class="eyebrow">How I can help</p>
+          <h2>What I actually take on.</h2>
+          <p class="lede">
+            Website packages are under rates. These four are the work I can show, not a menu of every buzzword.
+          </p>
+        </div>
+        <div class="service-grid" id="service-grid"></div>
+      </section>
+
+      <section class="section rates" id="rates">
+        <div class="section-head">
+          <p class="eyebrow">Website development rates</p>
+          <h2>Clear packages. No surprise invoices.</h2>
+          <p class="lede" data-rates-note>
+            Prices are in USD, as starting points for small businesses and startups. Local or overseas work is scoped before we begin.
+          </p>
+        </div>
+
+        <div class="rate-grid" id="rate-grid"></div>
+
+        <div class="rate-extras">
+          <article class="extra-card">
+            <p class="eyebrow">Hourly</p>
+            <p class="extra-price"><span data-hourly></span></p>
+            <p class="muted" data-hourly-note></p>
+          </article>
+          <article class="extra-card extra-addons">
+            <p class="eyebrow">Add-ons</p>
+            <ul class="addon-list" id="addon-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>From first call to launch.</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <h3>Brief</h3>
+            <p>We align on goals, pages, timeline, and budget so the quote is accurate.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Design</h3>
+            <p>You get a clear visual direction before development starts. Revisions are included.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Build</h3>
+            <p>I develop a fast, responsive site and share previews as we go.</p>
+          </li>
+          <li>
+            <span>04</span>
+            <h3>Launch</h3>
+            <p>Final polish, handoff, and optional care so the site stays current after go-live.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Let’s work</p>
+            <h2>Tell me about the project you want built.</h2>
+            <p class="lede">
+              Share a few details and I’ll reply within 24 hours with a fit check, timeline, and a firm quote.
+            </p>
+            <p class="contact-email">
+              Or email
+              <a id="email-link" href="mailto:fabulousdallen87@gmail.com">fabulousdallen87@gmail.com</a>
+            </p>
+            <p class="contact-email">
+              Prefer WhatsApp?
+              <a class="js-hire" href="#contact">Message me</a>
+            </p>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" />
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Project type
+              <select name="package">
+                <option value="Starter">Starter website — up to 10 pages</option>
+                <option value="Business" selected>Business website — up to 20 pages</option>
+                <option value="Custom">Custom — shop or web app</option>
+                <option value="Websites & frontend">Websites & frontend</option>
+                <option value="Backend & APIs">Backend & APIs</option>
+                <option value="Product builds">Product builds</option>
+                <option value="Not sure">Not sure yet</option>
+              </select>
+            </label>
+            <label>
+              Project details
+              <textarea name="message" rows="4" required placeholder="What do you need built, and when?"></textarea>
+            </label>
+            <p class="form-status" id="form-status" role="status" hidden></p>
+            <button class="btn btn-lime btn-full" type="submit" id="form-submit">Send inquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span data-logo-foot>lashidi</span> — software development</p>
+      <div class="social-row js-socials"></div>
+      <p class="muted">
+        <a class="js-github" href="https://github.com/fabber04" target="_blank" rel="noopener">GitHub</a>
+        · Prices in USD, scoped per project.
+      </p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
