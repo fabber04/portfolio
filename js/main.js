@@ -3,8 +3,22 @@
   const root = document.documentElement;
   const savedTheme = localStorage.getItem("theme");
 
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(next) {
+    if (next === "light") {
+      root.setAttribute("data-theme", "light");
+    } else {
+      root.removeAttribute("data-theme");
+    }
+    localStorage.setItem("theme", next);
+    if (themeColor) {
+      themeColor.setAttribute("content", next === "light" ? "#f4efe4" : "#0b0b0d");
+    }
+  }
+
   if (savedTheme === "light") {
-    root.setAttribute("data-theme", "light");
+    applyTheme("light");
   }
 
   const fullName = `${site.firstName} ${site.lastName}`.trim();
@@ -209,12 +223,7 @@
 
   document.getElementById("theme-toggle").addEventListener("click", () => {
     const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
-    if (next === "light") {
-      root.setAttribute("data-theme", "light");
-    } else {
-      root.removeAttribute("data-theme");
-    }
-    localStorage.setItem("theme", next);
+    applyTheme(next);
   });
 
   const menuBtn = document.getElementById("menu-toggle");

@@ -7,6 +7,7 @@
   --muted: #9b9ba3;
   --lime: #c8f542;
   --lime-ink: #111114;
+  --lime-text: #c8f542;
   --purple: #6b4dff;
   --purple-2: #8a74ff;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
@@ -14,16 +15,23 @@
   --header: 76px;
   --font: "DM Sans", system-ui, sans-serif;
   --display: "Syne", "DM Sans", sans-serif;
+  color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --bg: #f3f3f0;
-  --bg-2: #ecece7;
-  --surface: #ffffff;
-  --line: rgba(17, 17, 20, 0.1);
-  --text: #111114;
-  --muted: #5c5c66;
-  --shadow: 0 20px 50px rgba(17, 17, 20, 0.08);
+  --bg: #f4efe4;
+  --bg-2: #ebe3d3;
+  --surface: #fffaf1;
+  --line: rgba(46, 36, 18, 0.12);
+  --text: #17140f;
+  --muted: #6a6358;
+  --lime: #c2dc4a;
+  --lime-ink: #1c2408;
+  --lime-text: #3d5c08;
+  --purple: #5a3fe0;
+  --purple-2: #4a32c4;
+  --shadow: 0 18px 44px rgba(46, 32, 12, 0.1);
+  color-scheme: light;
 }
 
 *,
@@ -74,6 +82,11 @@ textarea {
   pointer-events: none;
   filter: blur(10px);
   opacity: 0.55;
+}
+
+[data-theme="light"] .orb {
+  opacity: 0.22;
+  filter: blur(18px);
 }
 
 .orb-lime {
@@ -652,7 +665,7 @@ main {
   padding: 8px 12px;
   border-radius: 999px;
   background: #111114;
-  color: var(--lime);
+  color: #c8f542;
   font-family: var(--display);
   font-size: 1.15rem;
   font-weight: 800;
@@ -664,7 +677,16 @@ main {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: color-mix(in srgb, var(--lime) 80%, white);
+  color: color-mix(in srgb, #c8f542 80%, white);
+}
+
+[data-theme="light"] .rate-maintain-price {
+  background: #1c2408;
+  color: #d7ee6a;
+}
+
+[data-theme="light"] .rate-maintain-price small {
+  color: color-mix(in srgb, #d7ee6a 78%, white);
 }
 
 .rate-card.popular {
@@ -676,6 +698,16 @@ main {
 
 .rate-card.popular:hover {
   border-color: var(--lime);
+}
+
+[data-theme="light"] .rate-card.popular {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--lime) 18%, var(--surface)), var(--surface) 44%);
+  box-shadow: 0 16px 36px rgba(46, 32, 12, 0.08);
+}
+
+[data-theme="light"] .btn:hover {
+  filter: brightness(0.97);
 }
 
 .popular-badge {
@@ -774,7 +806,7 @@ a.project-card:focus-visible {
   margin-top: auto;
   padding-top: 18px;
   font-weight: 700;
-  color: var(--lime);
+  color: var(--lime-text);
 }
 
 .service-card {
@@ -849,7 +881,7 @@ a.project-card:focus-visible {
 
 .steps span {
   font-family: var(--display);
-  color: var(--lime);
+  color: var(--lime-text);
   font-weight: 800;
 }
 
@@ -952,11 +984,7 @@ a.project-card:focus-visible {
 }
 
 .form-status.is-ok {
-  color: var(--lime);
-}
-
-[data-theme="light"] .form-status.is-ok {
-  color: #3a6b00;
+  color: var(--lime-text);
 }
 
 .form-status.is-err {
