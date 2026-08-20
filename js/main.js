@@ -1,4 +1,15 @@
 (function () {
+  ["gesturestart", "gesturechange", "gestureend"].forEach((eventName) => {
+    document.addEventListener(eventName, (event) => event.preventDefault());
+  });
+  document.addEventListener(
+    "touchmove",
+    (event) => {
+      if (event.touches.length > 1) event.preventDefault();
+    },
+    { passive: false }
+  );
+
   const site = window.SITE;
   const root = document.documentElement;
   const savedTheme = localStorage.getItem("theme");
