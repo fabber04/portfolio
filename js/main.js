@@ -13,7 +13,7 @@
     }
     localStorage.setItem("theme", next);
     if (themeColor) {
-      themeColor.setAttribute("content", next === "light" ? "#f4efe4" : "#0b0b0d");
+      themeColor.setAttribute("content", next === "light" ? "#eef0f8" : "#0b0b0d");
     }
   }
 

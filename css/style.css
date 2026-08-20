@@ -19,18 +19,18 @@
 }
 
 [data-theme="light"] {
-  --bg: #f4efe4;
-  --bg-2: #ebe3d3;
-  --surface: #fffaf1;
-  --line: rgba(46, 36, 18, 0.12);
-  --text: #17140f;
-  --muted: #6a6358;
-  --lime: #c2dc4a;
-  --lime-ink: #1c2408;
-  --lime-text: #3d5c08;
-  --purple: #5a3fe0;
-  --purple-2: #4a32c4;
-  --shadow: 0 18px 44px rgba(46, 32, 12, 0.1);
+  --bg: #eef0f8;
+  --bg-2: #e4e7f3;
+  --surface: #ffffff;
+  --line: rgba(28, 24, 56, 0.1);
+  --text: #14141c;
+  --muted: #5c5d72;
+  --lime: #c8f542;
+  --lime-ink: #14141c;
+  --lime-text: #4f3bd4;
+  --purple: #5b45e8;
+  --purple-2: #4a38c9;
+  --shadow: 0 18px 44px rgba(28, 24, 56, 0.08);
   color-scheme: light;
 }
 
@@ -85,8 +85,12 @@ textarea {
 }
 
 [data-theme="light"] .orb {
-  opacity: 0.22;
-  filter: blur(18px);
+  opacity: 0.18;
+  filter: blur(22px);
+}
+
+[data-theme="light"] .orb-lime {
+  opacity: 0.14;
 }
 
 .orb-lime {
@@ -681,12 +685,12 @@ main {
 }
 
 [data-theme="light"] .rate-maintain-price {
-  background: #1c2408;
-  color: #d7ee6a;
+  background: #14141c;
+  color: #c8f542;
 }
 
 [data-theme="light"] .rate-maintain-price small {
-  color: color-mix(in srgb, #d7ee6a 78%, white);
+  color: color-mix(in srgb, #c8f542 78%, white);
 }
 
 .rate-card.popular {
@@ -702,12 +706,21 @@ main {
 
 [data-theme="light"] .rate-card.popular {
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--lime) 18%, var(--surface)), var(--surface) 44%);
-  box-shadow: 0 16px 36px rgba(46, 32, 12, 0.08);
+    linear-gradient(180deg, color-mix(in srgb, var(--purple) 9%, var(--surface)), var(--surface) 46%);
+  box-shadow: 0 16px 36px rgba(28, 24, 56, 0.07);
+  border-color: color-mix(in srgb, var(--purple) 28%, var(--line));
+}
+
+[data-theme="light"] .rate-card.popular:hover {
+  border-color: var(--purple);
 }
 
 [data-theme="light"] .btn:hover {
   filter: brightness(0.97);
+}
+
+[data-theme="light"] .site-header {
+  background: color-mix(in srgb, #ffffff 72%, var(--bg));
 }
 
 .popular-badge {
