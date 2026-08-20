@@ -198,8 +198,7 @@ main,
   gap: 10px;
 }
 
-.icon-btn,
-.menu-btn {
+.icon-btn {
   width: 44px;
   height: 44px;
   flex: 0 0 auto;
@@ -213,6 +212,31 @@ main,
   -webkit-tap-highlight-color: transparent;
 }
 
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 14px 0 12px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--lime-ink);
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-btn[aria-expanded="true"] {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
 .icon-btn svg {
   width: 18px;
   height: 18px;
@@ -223,15 +247,16 @@ html:not([data-theme="light"]) .icon-sun {
   display: none;
 }
 
-.menu-btn span {
-  display: block;
-  width: 16px;
-  height: 1.5px;
-  background: currentColor;
+.menu-btn-bars {
+  display: grid;
+  gap: 5px;
 }
 
-.menu-btn span + span {
-  margin-top: 5px;
+.menu-btn-bars span {
+  display: block;
+  width: 14px;
+  height: 2px;
+  background: currentColor;
 }
 
 .btn {

@@ -241,11 +241,13 @@
 
   const menuBtn = document.getElementById("menu-toggle");
   const mobileNav = document.getElementById("mobile-nav");
+  const menuLabel = menuBtn.querySelector(".menu-btn-label");
 
   function closeMenu() {
     mobileNav.hidden = true;
     menuBtn.setAttribute("aria-expanded", "false");
     menuBtn.setAttribute("aria-label", "Open menu");
+    if (menuLabel) menuLabel.textContent = "Menu";
     document.body.classList.remove("menu-open");
   }
 
@@ -253,6 +255,7 @@
     mobileNav.hidden = false;
     menuBtn.setAttribute("aria-expanded", "true");
     menuBtn.setAttribute("aria-label", "Close menu");
+    if (menuLabel) menuLabel.textContent = "Close";
     document.body.classList.add("menu-open");
   }
 
