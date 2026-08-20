@@ -143,7 +143,7 @@ main,
   justify-content: space-between;
   gap: 12px;
   min-height: var(--header);
-  padding: 10px max(16px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));
+  padding: 10px max(20px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));
   padding-top: max(10px, env(safe-area-inset-top));
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(18px);
@@ -195,7 +195,12 @@ main,
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.menu-btn-label {
+  white-space: nowrap;
 }
 
 .icon-btn {
@@ -217,16 +222,18 @@ main,
   align-items: center;
   justify-content: center;
   gap: 8px;
+  width: auto;
   height: 44px;
-  padding: 0 14px 0 12px;
+  padding: 0 16px 0 14px;
   flex: 0 0 auto;
+  white-space: nowrap;
   border: 0;
   border-radius: 999px;
   background: var(--lime);
   color: var(--lime-ink);
   cursor: pointer;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.02em;
   -webkit-tap-highlight-color: transparent;
 }
@@ -459,7 +466,7 @@ main {
   margin: 8px 0 16px;
   font-family: var(--display);
   font-weight: 800;
-  font-size: clamp(1.65rem, 9vw, 2.45rem);
+  font-size: clamp(1.55rem, 8.2vw, 2.3rem);
   line-height: 0.92;
   letter-spacing: -0.05em;
   text-transform: uppercase;
