@@ -864,6 +864,31 @@ a.project-card:focus-visible {
   overflow-wrap: anywhere;
 }
 
+.contact-links {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-links li {
+  display: grid;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.contact-links a {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
 .contact-email a {
   color: var(--text);
   text-decoration: underline;
