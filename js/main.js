@@ -2,10 +2,27 @@
   ["gesturestart", "gesturechange", "gestureend"].forEach((eventName) => {
     document.addEventListener(eventName, (event) => event.preventDefault());
   });
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  document.addEventListener(
+    "touchstart",
+    (event) => {
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+    },
+    { passive: true }
+  );
   document.addEventListener(
     "touchmove",
     (event) => {
-      if (event.touches.length > 1) event.preventDefault();
+      if (event.touches.length > 1) {
+        event.preventDefault();
+        return;
+      }
+      const dx = Math.abs(event.touches[0].clientX - touchStartX);
+      const dy = Math.abs(event.touches[0].clientY - touchStartY);
+      if (dx > dy) event.preventDefault();
     },
     { passive: false }
   );
