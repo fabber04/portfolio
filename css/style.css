@@ -327,7 +327,6 @@ main {
   order: 1;
   container-type: inline-size;
   container-name: name;
-  overflow: hidden;
 }
 
 .hero-portrait {
@@ -435,12 +434,10 @@ main {
   margin: 8px 0 16px;
   font-family: var(--display);
   font-weight: 800;
-  font-size: clamp(1.98rem, 7.2vw, 4.14rem);
-  font-size: clamp(1.98rem, 12.42cqi, 4.86rem);
+  font-size: clamp(1.65rem, 9vw, 2.45rem);
   line-height: 0.92;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
-  padding-right: 0.08em;
 }
 
 .display-name span {
@@ -1216,6 +1213,11 @@ a.project-card:focus-visible {
   .hero-main,
   .hero-portrait {
     order: initial;
+  }
+
+  .display-name {
+    font-size: clamp(2.4rem, 12cqi, 5.2rem);
+    letter-spacing: -0.06em;
   }
 
   .portrait-frame {
