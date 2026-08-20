@@ -56,8 +56,6 @@
   const hireHref = whatsappNumber
     ? `https://wa.me/${whatsappNumber}?text=${hireMessage}`
     : "#contact";
-  const whatsappLabel = formatPhone(site.social.whatsapp);
-  const linkedinHref = site.social.linkedin || "";
 
   document.querySelectorAll(".js-hire").forEach((hire) => {
     hire.href = hireHref;
@@ -65,19 +63,6 @@
       hire.target = "_blank";
       hire.rel = "noopener";
     }
-  });
-
-  const whatsappLink = document.getElementById("whatsapp-link");
-  if (whatsappLink && hireHref.startsWith("http")) {
-    whatsappLink.href = hireHref;
-    whatsappLink.textContent = whatsappLabel;
-  }
-
-  document.querySelectorAll("#linkedin-link, #about-linkedin, #footer-linkedin").forEach((link) => {
-    if (!linkedinHref) return;
-    link.href = linkedinHref;
-    link.target = "_blank";
-    link.rel = "noopener";
   });
 
   document.querySelectorAll(".js-github").forEach((link) => {
@@ -424,14 +409,6 @@
   scrollToHash();
   window.addEventListener("load", scrollToHash);
   window.addEventListener("hashchange", scrollToHash);
-
-  function formatPhone(value) {
-    const digits = String(value || "").replace(/\D/g, "");
-    if (digits.length === 12 && digits.startsWith("263")) {
-      return `+263 ${digits.slice(3, 6)} ${digits.slice(6, 9)} ${digits.slice(9)}`;
-    }
-    return digits ? `+${digits}` : String(value || "").trim();
-  }
 
   function setText(selector, value) {
     document.querySelectorAll(selector).forEach((node) => {
