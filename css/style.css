@@ -1345,6 +1345,32 @@ a.project-card:focus-visible {
   }
 }
 
+.brick {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    transform 0.72s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.5s ease;
+  transition-delay: var(--brick-delay, 0ms);
+}
+
+.brick[data-brick="left"] {
+  transform: translate3d(-36px, 32px, 0) rotate(-1.4deg);
+}
+
+.brick[data-brick="right"] {
+  transform: translate3d(36px, 32px, 0) rotate(1.4deg);
+}
+
+.brick[data-brick="up"] {
+  transform: translate3d(0, 46px, 0) scale(0.96);
+}
+
+.brick.is-in {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1353,5 +1379,11 @@ a.project-card:focus-visible {
   .btn:hover,
   .rate-card:hover {
     transform: none;
+  }
+
+  .brick {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

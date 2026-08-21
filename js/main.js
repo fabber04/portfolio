@@ -440,6 +440,39 @@
   scrollToHash();
   window.addEventListener("load", scrollToHash);
   window.addEventListener("hashchange", scrollToHash);
+  initBrickReveal();
+
+  function initBrickReveal() {
+    const bricks = document.querySelectorAll(
+      ".section-head, .band, .project-card, .service-card, .rate-card, .extra-card, .steps li, .contact-panel, .value-card, .fact-card, .about-split, .highlight, .about-cta"
+    );
+    if (!bricks.length) return;
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lanes = ["left", "right", "up"];
+
+    bricks.forEach((brick, index) => {
+      brick.classList.add("brick");
+      brick.dataset.brick = lanes[index % 3];
+      brick.style.setProperty("--brick-delay", `${(index % 5) * 70}ms`);
+      if (reduce) brick.classList.add("is-in");
+    });
+
+    if (reduce) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.14, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    bricks.forEach((brick) => observer.observe(brick));
+  }
 
   function setText(selector, value) {
     document.querySelectorAll(selector).forEach((node) => {
