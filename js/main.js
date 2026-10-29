@@ -93,6 +93,24 @@
     }
   });
 
+  // Web Services package buttons: pre-filled WhatsApp message per package.
+  if (whatsappNumber) {
+    document.querySelectorAll(".js-wa-package").forEach((link) => {
+      const text = `Hi Fabilous, I'm interested in the ${link.dataset.package} website package (${link.dataset.price}). Can we chat?`;
+      link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    });
+  }
+
+  const wsCase = site.webServicesCase || {};
+  const wsShot = document.getElementById("ws-case-shot");
+  if (wsShot && wsCase.image) {
+    wsShot.innerHTML = `<img src="${escapeAttr(wsCase.image)}" alt="Screenshot of the fish and kapenta seller website" width="1200" height="750" loading="lazy" decoding="async" />`;
+  }
+  const wsLink = document.getElementById("ws-case-link");
+  if (wsLink && wsCase.url) {
+    wsLink.outerHTML = `<a class="project-link" href="${escapeAttr(wsCase.url)}" target="_blank" rel="noopener">Visit the live site</a>`;
+  }
+
   document.querySelectorAll(".js-github").forEach((link) => {
     link.href = site.social.github;
   });
@@ -444,7 +462,7 @@
 
   function initBrickReveal() {
     const bricks = document.querySelectorAll(
-      ".section-head, .band, .project-card, .service-card, .rate-card, .extra-card, .steps li, .contact-panel, .value-card, .fact-card, .about-split, .highlight, .about-cta"
+      ".section-head, .band, .project-card, .service-card, .rate-card, .ws-case, .extra-card, .steps li, .contact-panel, .value-card, .fact-card, .about-split, .highlight, .about-cta"
     );
     if (!bricks.length) return;
 

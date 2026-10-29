@@ -57,7 +57,7 @@ window.SITE = {
     github: "https://github.com/fabber04",
     linkedin: "https://www.linkedin.com/in/fabilous-lashidi-571ab0259",
     dribbble: "https://dribbble.com/",
-    whatsapp: "+263777965100"
+    whatsapp: "+263777995100"
   },
 
   skills: ["Software Development", "Web apps", "CT Flex cofounder"],
@@ -124,6 +124,13 @@ window.SITE = {
       tags: ["Web app", "Education"]
     }
   ],
+
+  // Web Services case study. When the fish & kapenta site is live, add its
+  // url and a screenshot path (e.g. "assets/work-kapenta.jpg").
+  webServicesCase: {
+    url: "",
+    image: ""
+  },
 
   currency: "USD",
   currencySymbol: "$",
