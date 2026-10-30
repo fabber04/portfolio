@@ -1387,3 +1387,127 @@ a.project-card:focus-visible {
     transition: none;
   }
 }
+
+/* ---------- Web Services (food businesses) ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ws-grid {
+  display: grid;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.ws-price {
+  font-size: clamp(2rem, 6vw, 2.3rem);
+  flex-wrap: wrap;
+}
+
+.ws-price span {
+  white-space: nowrap;
+}
+
+.btn-wa {
+  background: #1f8f4e;
+  color: #fff;
+}
+
+.ws-card .btn {
+  gap: 8px;
+}
+
+.ws-note {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.ws-case {
+  display: grid;
+  margin-top: 28px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.ws-case-shot {
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+  background:
+    radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--lime) 18%, transparent), transparent 55%),
+    radial-gradient(circle at 75% 70%, color-mix(in srgb, var(--purple) 22%, transparent), transparent 55%),
+    var(--bg-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.ws-case-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.ws-case-placeholder {
+  margin: 0;
+  padding: 24px;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+.ws-case-body {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.ws-case-body h3 {
+  margin: 8px 0;
+  font-family: var(--display);
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 640px) {
+  .ws-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .ws-case {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .ws-case-shot {
+    min-height: 300px;
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+  }
+
+  .ws-case-body {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .ws-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .ws-price {
+    font-size: 1.7rem;
+  }
+}
